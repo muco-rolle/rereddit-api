@@ -1,7 +1,8 @@
-import { database } from '@rereddit/config';
+import { database, server } from '@rereddit/config';
 
-async function bootstrap() {
+async function main() {
     await database.run();
+    await server.run();
 }
 
-bootstrap();
+main();

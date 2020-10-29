@@ -14,7 +14,7 @@ export const database = {
 
             await connect(url, mongodbOptions);
 
-            logger.info(`mongodb running at: ${url}`);
+            logger.info(`database is running on: ${url}`);
         } catch (error) {
             logger.error(error);
         }

@@ -1,7 +1,7 @@
 import winston, { Logger, Logform } from 'winston';
-import { join } from 'path';
+// import { join } from 'path';
 
-import { LOG_PATH } from '@rereddit/config';
+// import { LOG_PATH } from '@rereddit/config';
 import { nodeEnv } from '@rereddit/utils';
 
 class LoggerUtils {
@@ -16,6 +16,7 @@ class LoggerUtils {
                 winston.format.colorize(),
                 winston.format.json()
             ),
+            /*
             transports: [
                 new winston.transports.File({
                     filename: join(LOG_PATH, 'combined.log'),
@@ -24,7 +25,7 @@ class LoggerUtils {
                     filename: join(LOG_PATH, 'error.log'),
                     level: 'error',
                 }),
-            ],
+            ],*/
         });
 
         if (nodeEnv !== 'production') {

@@ -19,7 +19,7 @@ export const env = {
             return process.env[key.toUpperCase()] as string;
         }
 
-        const envConfig = config({ path });
+        const envConfig = config({ path: path as string });
         dotenvExpand(envConfig);
 
         const envVaribale = process.env[key.toUpperCase()];

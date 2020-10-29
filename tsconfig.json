@@ -1,6 +1,8 @@
 {
     "compilerOptions": {
-        "target": "es6",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "target": "es2018",
         "module": "commonjs",
         "esModuleInterop": true,
         "moduleResolution": "node",
@@ -19,6 +21,7 @@
         "noUnusedParameters": true,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
+        "lib": ["es2018", "esnext.asynciterable"],
         "baseUrl": ".",
         "paths": {
             "@rereddit/config": ["src/config"],

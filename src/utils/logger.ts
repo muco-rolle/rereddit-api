@@ -2,7 +2,7 @@ import winston, { Logger, Logform } from 'winston';
 import { join } from 'path';
 
 import { LOG_PATH } from '@rereddit/config';
-import { nodeEnv } from './env';
+import { nodeEnv } from '@rereddit/utils';
 
 class LoggerUtils {
     private static instance: Logger;

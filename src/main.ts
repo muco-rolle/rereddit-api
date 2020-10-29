@@ -1,3 +1,7 @@
-import { logger } from '@rereddit/utils';
+import { database } from '@rereddit/config';
 
-logger.info('Hello Testing');
+async function bootstrap() {
+    await database.run();
+}
+
+bootstrap();

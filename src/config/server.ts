@@ -1,5 +1,7 @@
 import 'reflect-metadata';
 import express from 'express';
+import { Container } from 'typedi';
+
 import { ApolloServer } from 'apollo-server-express';
 import { buildSchema } from 'type-graphql';
 import { logger, env } from '@rereddit/utils';
@@ -17,6 +19,7 @@ export const server = {
                 schema: await buildSchema({
                     resolvers: [RESOLVERS_PATH],
                     validate: false,
+                    container: Container,
                 }),
             });
 

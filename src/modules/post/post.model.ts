@@ -1,6 +1,7 @@
-import { Field, ID, InputType, ObjectType } from 'type-graphql';
+import { Field, InputType, ObjectType } from 'type-graphql';
 import { getModelForClass, modelOptions, prop } from '@typegoose/typegoose';
-
+import { ObjectID } from '@rereddit/types';
+import { ObjectId } from 'mongodb';
 @InputType()
 export class PostInput {
     @Field() title!: string;
@@ -15,13 +16,14 @@ export class PostInput {
     },
 })
 export class Post {
-    @prop() @Field(() => ID, { name: 'id' }) id?: number;
+    @Field(() => ObjectID, { name: 'id' }) _id?: ObjectId;
 
     @prop() @Field(() => String) title!: string;
 
     @prop() @Field(() => String) description!: string;
 
     @prop() @Field(() => String) content!: string;
+
     @Field() updatedAt?: Date;
     @Field() createdAt?: Date;
 }

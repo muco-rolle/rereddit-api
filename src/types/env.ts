@@ -5,6 +5,8 @@ export interface EnvTypes {
 
     NODE_ENV: string;
 
+    SECRET_KEY: string;
+
     DB_HOST: string;
     DB_PORT: string;
     DB_NAME: string;
